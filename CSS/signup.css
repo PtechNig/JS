@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(240, 204, 157);
+}
+
+img{
+    width: 100%;
+}
+
+
+.container{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    color: rgb(51, 29, 0);
+    text-align: center;
+}
+
+header{
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.form{
+    position: absolute;
+    max-width: 55%;
+    width: 100%;
+}
+
+.form-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+.form-content form{
+    background-color: rgb(252, 224, 189);
+    padding: 20px;
+    
+}
+
+.form-field input{
+    width: 100%;
+    border: 1px solid rgb(51, 29, 0);
+    border-radius: 5px 0;
+    outline: none;
+    background-color: transparent;
+    padding: 8px;
+    margin-top: 15px;
+}
+
+.form-field{
+    position: relative;
+}
+
+.fa-regular{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    cursor: pointer;
+}
+
+.form-field input:focus{
+    border: 2px solid rgb(51, 29, 0);
+}
+
+
+.btn button{
+    width: 100%;
+    border: 1px solid rgb(51, 29, 0);
+    border-radius: 5px 0;
+    outline: none;
+    background-color: rgb(51, 29, 0);
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    margin-top: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+.btn button:hover{
+    background-color: transparent;
+    color: rgb(51, 29, 0);
+}
+
+::placeholder{
+    color: rgb(51, 29, 0);
+}
+
+.login-link{
+    margin-left: 10px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.login-link:hover{
+    text-decoration: underline;
+}
+
+.signup{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.show-signup .signup{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.line{
+    background-color: rgb(51, 29, 0);
+    height: 2px;
+    width: 100%;
+    margin: 25px 0;
+    position: relative;
+}
+
+.line::before{
+    content: "Or";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(252, 224, 189);
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.facebook, .google{
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(51, 29, 0);
+    color: rgb(252, 224, 189);
+    padding: 7px;
+    transition: 0.5s;
+    cursor: pointer;
+    border-radius: 0 5px;
+}
+
+.facebook:hover,
+.google:hover{
+    background-color: rgb(63, 45, 21);
+}
+
+@media (max-width: 950px) {
+    .form{
+        max-width: 90%;
+    }
+    
+}
+
+
+@media (max-width: 800px) {
+    .form{
+        max-width: 90%;
+    }
+
+    .form-content{
+        grid-template-columns: 1fr;
+    }
+    
+}
+
